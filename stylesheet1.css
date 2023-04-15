@@ -185,7 +185,9 @@ img {
   cursor: pointer;
   object-fit: cover;
 }
-
+.no-hover {
+  pointer-events: none;
+}
 .modal {
   display: none;
   position: fixed;
