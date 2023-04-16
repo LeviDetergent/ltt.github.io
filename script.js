@@ -16,7 +16,7 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 };
 
-$('.navbar-collapse a').on('click', function(){
+$('.navbar-collapse a').on('touchstart', function(){
     $(".navbar-collapse").collapse('hide');
 });
 
