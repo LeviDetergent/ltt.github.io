@@ -90,6 +90,35 @@ body {
 .navbar-toggler-icon + .navbar-toggler-icon {
   margin-top: 4px;
 }
+.navbar-collapse {
+  background-color: #0067aa;
+  z-index: 99;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  padding-top: 20px;
+}
+
+.navbar-nav {
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.navbar-nav .nav-link {
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.navbar-toggler {
+  color: #fff;
+  border-color: #fff;
+}
 
 
     .container-fluid {
