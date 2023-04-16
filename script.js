@@ -1,4 +1,3 @@
-// JavaScript Document
 let prevScrollpos = window.pageYOffset;
 let isNavVisible = true;
 
@@ -28,8 +27,13 @@ window.addEventListener("scroll", function() {
     if (currentScrollPos === 0) {
       navbar.classList.remove("scrolled-up");
       navbar.classList.remove("scrolled-down");
+      navbar.classList.remove("hidden");
+      isNavVisible = true;
     } else {
       navbar.classList.add("scrolled-down");
+      navbar.classList.remove("scrolled-up");
+      navbar.classList.add("hidden");
+      isNavVisible = false;
     }
   }
 });
