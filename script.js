@@ -20,6 +20,16 @@ $(document).ready(function () {
     $('.navbar-collapse').collapse('hide');
   });
 });
+var navbarToggler = document.querySelector('.navbar-toggler');
+var navbarBrand = document.querySelector('.navbar-brand');
+
+navbarToggler.addEventListener('click', function() {
+  if (navbarBrand.style.display === 'none') {
+    navbarBrand.style.display = 'block';
+  } else {
+    navbarBrand.style.display = 'none';
+  }
+});
 
 
  // Open the modal

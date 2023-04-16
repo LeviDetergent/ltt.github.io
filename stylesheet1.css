@@ -21,6 +21,12 @@ body {
       font-size: 18px;
       margin-bottom: 20px;
     }
+@media (max-width: 768px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
     .navbar {
  	  position: fixed;
       top: 0;
