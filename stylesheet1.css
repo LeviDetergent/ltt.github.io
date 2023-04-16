@@ -142,6 +142,10 @@ body {
   	  align-items: center;
 	}
 	
+	.about-img{
+	  width: 580px;
+	  height: 350px;
+	}
 	img {
   	  max-width: 100%;
   	  max-height: 100%;
@@ -175,6 +179,46 @@ body {
 .image {
   margin: 10px;
   width: 13%;
+  border-style: solid;
+  border-width: thin;
+}
+
+.image2	{
+  margin: 10px;
+  width: 13%;
+  height: 220px;
+  border-style: solid;
+  border-width: thin;
+}
+
+.image3	{
+  margin: 10px;
+  width: 13%;
+  height: 125px;
+  border-style: solid;
+  border-width: thin;
+}
+
+.image4	{
+  margin: 10px;
+  width: 13%;
+  height: 125px;
+  border-style: solid;
+  border-width: thin;
+}
+
+.image5	{
+  margin: 10px;
+  width: 13%;
+  height: 125px;
+  border-style: solid;
+  border-width: thin;
+}
+
+.image6	{
+  margin: 10px;
+  width: 13%;
+  height: 125px;
   border-style: solid;
   border-width: thin;
 }

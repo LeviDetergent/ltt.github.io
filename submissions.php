@@ -15,13 +15,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Build the email message
-    $to = "datboomlife@gmail.com";
+    $to = "sales@lt-engineering.com";
     $subject = "New Quote Request";
     $body = "Name: $name\nEmail: $email\nPhone: $phone\nMessage: $message";
 
     // Send the email
     if(mail($to, $subject, $body)) {
-        echo "Thank you for your quote request. We will get back to you as soon as possible.";
+        // Redirect to thank you page
+        header("Location: thank-you.html");
+        exit;
     } else {
         echo "There was a problem sending your quote request. Please try again later.";
     }

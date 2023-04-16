@@ -15,6 +15,9 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 };
+$('.navbar-collapse a').click(function(){
+    $(".navbar-collapse").collapse('hide');
+});
 
  // Open the modal
   function openModal() {
