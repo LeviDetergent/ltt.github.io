@@ -16,14 +16,6 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 };
 
-$('.navbar-collapse a').on('touchstart', function(){
-    $(".navbar-collapse").collapse('hide');
-});
-
-$('.navbar-nav>li>a').on('click', function(){
-    $('.navbar-collapse').collapse('hide');
-});
-
  // Open the modal
   function openModal() {
     document.getElementById("myModal").style.display = "block";
