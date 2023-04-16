@@ -165,7 +165,6 @@ body {
 
 	.blue-title{
 	  color: #0067aa;
-	  margin-left: 200px;
 	  font-weight: bold;
 	}
 
@@ -179,52 +178,30 @@ body {
   flex-wrap: wrap;
   margin-left: 200px;
 }
-
-.image {
-  margin: 10px;
-  width: 13%;
-  border-style: solid;
-  border-width: thin;
+.caption {
+  margin-top: 1%;
+  margin-right: 30%;
 }
 
-.image2	{
+.image, .image2{
   margin: 10px;
-  width: 13%;
-  height: 220px;
-  border-style: solid;
-  border-width: thin;
+  max-width: 10%;
+  max-height: 10%;
+  border-sizing: border-box;
 }
 
 .image3	{
   margin: 10px;
-  width: 13%;
-  height: 125px;
-  border-style: solid;
-  border-width: thin;
+  max-width: 10%;
+  border-sizing: border-box;
+  box-sizing: content-box;
 }
 
 .image4	{
   margin: 10px;
-  width: 13%;
-  height: 125px;
-  border-style: solid;
-  border-width: thin;
-}
-
-.image5	{
-  margin: 10px;
-  width: 13%;
-  height: 125px;
-  border-style: solid;
-  border-width: thin;
-}
-
-.image6	{
-  margin: 10px;
-  width: 13%;
-  height: 125px;
-  border-style: solid;
-  border-width: thin;
+  max-width: 13%;
+  height: 110px;
+  border-sizing: border-box;
 }
 
 img {
@@ -256,8 +233,7 @@ img {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  max-width: 25%;
-  max-height: 100%;
+  max-width: 50%;
   overflow: hidden;
 }
 
@@ -271,9 +247,11 @@ img {
 
 img.demo {
   margin: auto;
-  height: 90%;
-  max-width: none;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
+
 .prev,
 .next {
   cursor: pointer;

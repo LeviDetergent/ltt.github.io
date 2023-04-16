@@ -21,6 +21,17 @@ window.addEventListener("scroll", function() {
   }
   
   prevScrollpos = currentScrollPos;
+  
+  // Code for tablet devices
+  const tabletBreakpoint = 768;
+  if (window.innerWidth >= tabletBreakpoint) {
+    if (currentScrollPos === 0) {
+      navbar.classList.remove("scrolled-up");
+      navbar.classList.remove("scrolled-down");
+    } else {
+      navbar.classList.add("scrolled-down");
+    }
+  }
 });
 
  // Open the modal
