@@ -1,20 +1,26 @@
 // JavaScript Document
-window.addEventListener("scroll", function() {
-  var navbar = document.querySelector(".navbar");
-  navbar.classList.toggle("scrolled", window.scrollY > 0);
-});
-
+var navbar = document.querySelector(".navbar");
+var navbarHeight = navbar.offsetHeight;
 var prevScrollpos = window.pageYOffset;
 
-window.onscroll = function() {
+window.addEventListener("scroll", function() {
   var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.querySelector(".navbar").classList.remove("hidden");
+
+  // Check if the user has scrolled past the navbar height
+  if (currentScrollPos > navbarHeight) {
+    navbar.classList.add("scrolled");
   } else {
-    document.querySelector(".navbar").classList.add("hidden");
+    navbar.classList.remove("scrolled");
+  }
+
+  // Show/hide the navbar based on scroll direction
+  if (prevScrollpos > currentScrollPos || currentScrollPos < navbarHeight) {
+    navbar.classList.remove("hidden");
+  } else {
+    navbar.classList.add("hidden");
   }
   prevScrollpos = currentScrollPos;
-};
+});
 
  // Open the modal
   function openModal() {
