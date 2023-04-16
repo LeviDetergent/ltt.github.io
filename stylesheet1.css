@@ -37,7 +37,7 @@ body {
   	  position: absolute;
   	  top: 50%;
   	  transform: translateY(-51%);
-  	  max-width: 23%;
+  	  max-width: 30%;
 }
 	@media (max-width: 991.98px) {
   	.navbar-collapse.show + .navbar-brand img {
