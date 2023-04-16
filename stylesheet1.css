@@ -41,7 +41,7 @@ body {
 
 /* Show navbar when scrolling up */
 .navbar.hidden {
-  top: -80px;
+  top: 0px;
 }
 
 /* Navbar brand image */
