@@ -21,50 +21,82 @@ body {
       font-size: 18px;
       margin-bottom: 20px;
     }
-    .navbar {
- 	  position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
-      background-color: #0067aa;
-      transition: top 0.3s ease;
-	}
-	.navbar.hidden {
-  	  top: -80px;
-	}
-    .navbar-brand img {
-	  position: absolute;
-	  top: 50%;
-	  transform: translateY(-51%);
-      height: 100%;
-      width: auto;
-    }
-    .navbar-toggler {
-      border: none;
-      color: #fff;
-      font-size: 24px;
-    }
-	.navbar.scrolled {
-  	  top: -80px;
-	}
-    .navbar-toggler:focus, .navbar-toggler:active {
-      outline: none;
-      box-shadow: none;
-    }
-    .navbar-nav .nav-link {
-      color: #fff;
-      font-weight: bold;
-      font-size: 18px;
-      text-transform: uppercase;
-      padding: 20px;
-      margin-right: 20px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease-in-out;
-    }
-    .navbar-nav .nav-link:hover {
-      background-color: #005188;
-    }
+    /* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #0067aa;
+  transition: top 0.3s ease;
+}
+
+/* Hide navbar on mobile devices */
+@media (max-width: 767px) {
+  .navbar {
+    top: -80px;
+  }
+}
+
+/* Show navbar when scrolling up */
+.navbar.hidden {
+  top: -80px;
+}
+
+/* Navbar brand image */
+.navbar-brand img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-51%);
+  height: 100%;
+  width: auto;
+}
+
+/* Navbar toggler button */
+.navbar-toggler {
+  border: none;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Change navbar position when scrolled */
+.navbar.scrolled {
+  top: -80px;
+}
+
+/* Remove focus and active styles on toggler button */
+.navbar-toggler:focus, 
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Navbar link hover */
+.navbar-nav .nav-link:hover {
+  background-color: #005188;
+}
+
+/* Remove padding from navbar links on mobile devices */
+@media (max-width: 767px) {
+  .navbar-nav .nav-link {
+    padding: 10px;
+    margin-right: 0;
+  }
+}
+
     .container-fluid {
       max-width: 960px;
       margin: 0 auto;
