@@ -21,12 +21,6 @@ body {
       font-size: 18px;
       margin-bottom: 20px;
     }
-@media (max-width: 768px) {
-  .navbar-brand {
-    display: none;
-  }
-}
-
     .navbar {
  	  position: fixed;
       top: 0;
@@ -40,12 +34,16 @@ body {
   	  top: -80px;
 	}
     .navbar-brand img {
-	  position: absolute;
-	  top: 50%;
-	  transform: translateY(-51%);
-      height: 100%;
-      width: auto;
-    }
+  	  position: absolute;
+  	  top: 50%;
+  	  transform: translateY(-51%);
+  	  max-width: 23%;
+}
+	@media (max-width: 991.98px) {
+  	.navbar-collapse.show + .navbar-brand img {
+      display: none;
+  	  }
+	}
     .navbar-toggler {
       border: none;
       color: #fff;
