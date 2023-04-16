@@ -15,7 +15,8 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 };
-$('.navbar-collapse a').click(function(){
+
+$('.navbar-collapse a').on('click', function(){
     $(".navbar-collapse").collapse('hide');
 });
 
