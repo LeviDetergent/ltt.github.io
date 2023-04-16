@@ -15,6 +15,12 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 };
+$(document).ready(function () {
+  $('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+  });
+});
+
 
  // Open the modal
   function openModal() {
