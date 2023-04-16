@@ -1,24 +1,25 @@
 // JavaScript Document
-var navbar = document.querySelector(".navbar");
-var navbarHeight = navbar.offsetHeight;
-var prevScrollpos = window.pageYOffset;
+let prevScrollpos = window.pageYOffset;
+let isNavVisible = true;
 
 window.addEventListener("scroll", function() {
-  var currentScrollPos = window.pageYOffset;
-
-  // Check if the user has scrolled past the navbar height
-  if (currentScrollPos > navbarHeight) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-
-  // Show/hide the navbar based on scroll direction
-  if (prevScrollpos > currentScrollPos || currentScrollPos < navbarHeight) {
+  const currentScrollPos = window.pageYOffset;
+  const navbar = document.querySelector(".navbar");
+  
+  if (prevScrollpos > currentScrollPos) {
     navbar.classList.remove("hidden");
+    if (!isNavVisible) {
+      navbar.classList.add("scrolled-up");
+      navbar.classList.remove("scrolled-down");
+      isNavVisible = true;
+    }
   } else {
     navbar.classList.add("hidden");
+    navbar.classList.add("scrolled-down");
+    navbar.classList.remove("scrolled-up");
+    isNavVisible = false;
   }
+  
   prevScrollpos = currentScrollPos;
 });
 
