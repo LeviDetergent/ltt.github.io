@@ -1,3 +1,4 @@
+// JavaScript Document
 let prevScrollpos = window.pageYOffset;
 let isNavVisible = true;
 
@@ -5,36 +6,47 @@ window.addEventListener("scroll", function() {
   const currentScrollPos = window.pageYOffset;
   const navbar = document.querySelector(".navbar");
   
-  if (prevScrollpos > currentScrollPos) {
-    navbar.classList.remove("hidden");
-    if (!isNavVisible) {
-      navbar.classList.add("scrolled-up");
-      navbar.classList.remove("scrolled-down");
-      isNavVisible = true;
+  // Check window width and only run auto hide code for desktop devices
+  const desktopBreakpoint = 992;
+  if (window.innerWidth >= desktopBreakpoint) {
+    if (prevScrollpos > currentScrollPos) {
+      navbar.classList.remove("hidden");
+      if (!isNavVisible) {
+        navbar.classList.add("scrolled-up");
+        navbar.classList.remove("scrolled-down");
+        isNavVisible = true;
+      }
+    } else {
+      navbar.classList.add("hidden");
+      navbar.classList.add("scrolled-down");
+      navbar.classList.remove("scrolled-up");
+      isNavVisible = false;
     }
   } else {
-    navbar.classList.add("hidden");
-    navbar.classList.add("scrolled-down");
+    // Always show navbar for tablet devices
+    navbar.classList.remove("hidden");
     navbar.classList.remove("scrolled-up");
-    isNavVisible = false;
+    navbar.classList.remove("scrolled-down");
+    isNavVisible = true;
   }
   
   prevScrollpos = currentScrollPos;
-  
-  // Code for tablet devices
-  const tabletBreakpoint = 768;
-  if (window.innerWidth >= tabletBreakpoint) {
-    if (currentScrollPos === 0) {
-      navbar.classList.remove("scrolled-up");
-      navbar.classList.remove("scrolled-down");
-      navbar.classList.remove("hidden");
-      isNavVisible = true;
-    } else {
-      navbar.classList.add("scrolled-down");
-      navbar.classList.remove("scrolled-up");
-      navbar.classList.add("hidden");
-      isNavVisible = false;
-    }
+});
+
+// Adjust navbar behavior on window resize
+window.addEventListener("resize", function() {
+  const desktopBreakpoint = 992;
+  const navbar = document.querySelector(".navbar");
+
+  // If window width is less than desktop breakpoint, always show navbar and remove auto hide classes
+  if (window.innerWidth < desktopBreakpoint) {
+    navbar.classList.remove("hidden");
+    navbar.classList.remove("scrolled-up");
+    navbar.classList.remove("scrolled-down");
+    isNavVisible = true;
+  } else {
+    // If window width is greater than or equal to desktop breakpoint, reset navbar visibility
+    isNavVisible = true;
   }
 });
 

@@ -233,7 +233,7 @@ img {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  max-width: 50%;
+  max-width: 35%;
   overflow: hidden;
 }
 
