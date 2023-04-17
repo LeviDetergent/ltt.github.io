@@ -176,7 +176,6 @@ body {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 200px;
 }
 .caption {
   margin-top: 1%;
